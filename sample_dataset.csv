@@ -1,0 +1,16 @@
+id,name,email,country,signup_date
+1,John Doe,johndoe@EXAMPLE.COM,USA,2023-02-15
+2,Jane Smith,janesmith@example.com,Canada,2023-05-10
+3,Michael Brown,michael.brown@email.com,UK,2023-07-08
+4,Emily Davis,emilydavis@email.com,,2023-09-21
+5,Chris Wilson,chriswilson@email.com,Australia,2023-11-30
+6,David Johnson,david.johnson@email.com,USA,2024-01-05
+7,Alice White,alice.white@email.com,UK,2023-03-12
+8,Bob Martin,bob.martin@email.com,,2024-02-22
+9,Clara Oswald,clara.oswald@email.com,France,2023-06-18
+10,Daniel Craig,daniel.craig@email.com,Canada,2023-08-2
+11,Chris Wilson,chriswilson@email.com,Australia,2023-11-30
+12,Emily Davis,emilydavis@email.com,Canada,2023-09-21
+13,Jane Smith,janesmith@example.com,Canada,2023-05-10
+14,David Johnson,david.johnson@email.com,USA,2024-01-05
+15,,missing.email@email.com,USA,2023-10-05
