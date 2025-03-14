@@ -2,8 +2,8 @@
 -- 1. Fix missing VALUES
 -- 	a. missing name
 update sample_dataset
-set name = "unknown"
-where name is null;
+set name = coalesce(name, "unknown customer");
+
 
 -- b. missing country
 update sample_dataset
@@ -25,6 +25,15 @@ where name is not null;
 
 
 -- 3. Remove duplicate customer email
+-- a. Store duplicate records before deleting to avoid accidental data loss
+create table if not exists archive_sample_dataset as table sample_dataset with no data;
+
+insert into archive_sample_dataset
+select * from sample_dataset
+where id not in (
+	select min(id) from sample_dataset group by email
+);
+-- b. delete duplicate records
 delete from sample_dataset
 where id not in (
 	select min(id) from sample_dataset
